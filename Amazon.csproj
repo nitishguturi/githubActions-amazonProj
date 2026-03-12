@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <PublishIISAssets>true</PublishIISAssets> //this property is imp for azure webapps deployment
+    <PublishIISAssets>true</PublishIISAssets> 
   </PropertyGroup>
 
 </Project>
