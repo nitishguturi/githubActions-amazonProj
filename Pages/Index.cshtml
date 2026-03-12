@@ -1,0 +1,107 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Mobile Store";
+
+    var mobiles = new List<dynamic>
+    {
+        new { Name="iPhone 15", Brand="Apple", Price="$999" },
+        new { Name="Galaxy S24", Brand="Samsung", Price="$899" },
+        new { Name="Pixel 8", Brand="Google", Price="$799" },
+        new { Name="OnePlus 12", Brand="OnePlus", Price="$749" }
+    };
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 15px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .mobile-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .brand {
+            color: #555;
+        }
+
+        .price {
+            color: #1abc9c;
+            font-weight: bold;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 8px 12px;
+            background: #1abc9c;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Mobile Store</h2>
+    </header>
+
+    <div class="container">
+
+        @foreach (var mobile in mobiles)
+        {
+            <div class="card">
+                <div class="mobile-name">@mobile.Name</div>
+                <div class="brand">Brand: @mobile.Brand</div>
+                <div class="price">Price: @mobile.Price</div>
+                <br />
+                <a href="#" class="button">View Details</a>
+            </div>
+        }
+
+    </div>
+
+    <footer>
+        © 2026 Mobile Store
+    </footer>
+
+</body>
+</html>
