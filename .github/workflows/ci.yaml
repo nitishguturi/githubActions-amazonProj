@@ -1,0 +1,17 @@
+name: build aspnet project
+on: 
+    workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check-out
+        uses: actions/checkout@v3
+      - name: setup .net
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: restore dependensies
+        run: dotnet restore
+      - name: build application
+        run: dotnet_build --configuration Release --no-restore

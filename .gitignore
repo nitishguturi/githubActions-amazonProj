@@ -1,0 +1,91 @@
+########################################
+# Terraform
+########################################
+
+# Local terraform directories
+.terraform/
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+
+# Terraform CLI configuration
+.terraformrc
+terraform.rc
+
+# Plan files
+*.tfplan
+
+########################################
+# ASP.NET / Razor / .NET
+########################################
+
+# Build results
+bin/
+obj/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# IIS Express
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+########################################
+# Package managers
+########################################
+
+node_modules/
+
+########################################
+# Publish output
+########################################
+
+publish/
+wwwroot/lib/
+
+########################################
+# Secrets
+########################################
+
+appsettings.Development.json
+secrets.json
+
+########################################
+# OS generated files
+########################################
+
+.DS_Store
+Thumbs.db
+
+########################################
+# Rider / JetBrains
+########################################
+
+.idea/
+
+########################################
+# Backup files
+########################################
+
+*.bak
+*.swp
